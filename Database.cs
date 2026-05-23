@@ -11,7 +11,7 @@ namespace DataPetaniDesa
         // =============================================
         private readonly string _connectionString = new MySqlConnectionStringBuilder
         {
-            Server = "127.0.0.1",
+            Server = "locaIhost",
             Database = "db_petanidesa",
             UserID = "root",
             Password = "Ikhlas.",          // Kosongkan jika pakai XAMPP default
