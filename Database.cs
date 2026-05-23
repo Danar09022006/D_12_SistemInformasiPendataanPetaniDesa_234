@@ -23,7 +23,7 @@ namespace DataPetaniDesa
         // ─────────────────────────────────────────────
         public MySqlConnection GetConnection()
         {
-            return new MySqlConnection(_connectionString);
+            
         }
 
         // ─────────────────────────────────────────────
@@ -114,7 +114,7 @@ namespace DataPetaniDesa
         // ─────────────────────────────────────────────
         private static void AddParameters(MySqlCommand cmd, object parameters)
         {
-            if (parameters == null) return;
+           
 
             foreach (var prop in parameters.GetType().GetProperties())
             {
