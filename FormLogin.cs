@@ -19,7 +19,7 @@ namespace PetaniDesa
 
         public FormLogin()
         {
-            InitializeComponent();
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -50,20 +50,6 @@ namespace PetaniDesa
             }
         }
 
-        private void FormLogin_Load(object sender, EventArgs e)
-        {
-            // Menggunakan fungsi TestConnection yang sudah kita buat di Database.cs
-            if (db.TestConnection())
-            {
-                lblStatusKoneksi.Text = "Status: Terhubung ke Database ✅";
-                lblStatusKoneksi.ForeColor = System.Drawing.Color.Green;
-            }
-            else
-            {
-                lblStatusKoneksi.Text = "Status: Gagal Terhubung ❌";
-                lblStatusKoneksi.ForeColor = System.Drawing.Color.Red;
-            }
-        }
     }
 }
 
