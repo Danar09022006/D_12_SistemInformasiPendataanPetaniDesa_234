@@ -1,5 +1,4 @@
-﻿using DataPetaniDesa;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +13,6 @@ namespace PetaniDesa
 {
     public partial class FormPetani : Form
     {
-        // Panggil jembatan database
-        private Database db = new Database();
 
         // Simpan ID untuk keperluan Edit dan Hapus
         private string idPetaniTerpilih = "";
@@ -26,7 +23,6 @@ namespace PetaniDesa
 
         public FormPetani()
         {
-            InitializeComponent();
             lblTotalRecord = this.Controls.Find("lblTotalRecord", true).FirstOrDefault() as Label;
             HitungTotalData();
         }
@@ -38,19 +34,18 @@ namespace PetaniDesa
         private void LoadData(string pencarian)
         {
             string query = "";
-            DataTable dt;
 
 
             if (string.IsNullOrEmpty(pencarian))
             {
                 // SYARAT UCP 2: Menggunakan VIEW untuk Select data
-                query = "SELECT * FROM vw_data_petani";
+                query = "SELECT * FROM View_data_petani";
                 dt = db.FetchAll(query);
             }
             else
             {
                 // SYARAT UCP 2: Menggunakan STORED PROCEDURE untuk Search
-                query = "CALL sp_search_petani(@cari)";
+                query = "CALL sp_search_petani(@delete)";
                 dt = db.FetchAll(query, new { cari = pencarian });
             }
 
@@ -96,8 +91,8 @@ namespace PetaniDesa
             {
                 nik = txtNIK.Text,
                 nama = txtNama.Text,
-                jk = cbJenisKelamin.SelectedItem?.ToString() ?? "",
-                tgl = dtpTglLahir.Value.ToString("yyyy-MM-dd"),
+                jk = cbJenisKelamin.SelectedItem?.ToString() ??,
+                tgl = dtpTglLahir.Value.ToString(""),
                 telp = txtTelp.Text,
                 alamat = txtAlamat.Text,
                 tanaman = txtTanaman.Text
@@ -136,10 +131,10 @@ namespace PetaniDesa
                     string tglDariDatabase = row.Cells["tanggal_lahir_format"].Value.ToString();
                     dtpTglLahir.Value = DateTime.ParseExact(tglDariDatabase, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture);
                 }
-                else if (dgvPetani.Columns.Contains("tgl_lahir"))
+                else if (dgvPetani.Columns.Contains("tgllahir"))
                 {
                     // Jika kolom asli (tgl_lahir) yang terbaca
-                    dtpTglLahir.Value = Convert.ToDateTime(row.Cells["tgl_lahir"].Value);
+                    dtpTglLahir.Value = Convert.ToDateTime(row.Cells["tgllahir"].Value);
                 }
                 txtTelp.Text = row.Cells["no_telp"].Value.ToString();
                 txtAlamat.Text = row.Cells["alamat"].Value.ToString();

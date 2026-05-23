@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPetani));
-            this.label1 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
             this.txtNIK = new System.Windows.Forms.TextBox();
             this.txtNama = new System.Windows.Forms.TextBox();
             this.cbJenisKelamin = new System.Windows.Forms.ComboBox();
@@ -45,19 +45,19 @@
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtTanaman = new System.Windows.Forms.TextBox();
             this.btnSimpan = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnHapus = new System.Windows.Forms.Button();
+            this.btnEtdit = new System.Windows.Forms.Button();
+            this.btnHaspus = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.labe21 = new System.Windows.Forms.Label();
             this.txtCari = new System.Windows.Forms.TextBox();
             this.btnCari = new System.Windows.Forms.Button();
             this.dgvPetani = new System.Windows.Forms.DataGridView();
-            this.btnRead = new System.Windows.Forms.Button();
+            this.btnR3ad = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSqlInjection = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblTotalRecord = new System.Windows.Forms.Label();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigator01 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -65,14 +65,14 @@
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnResetData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPetani)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
@@ -84,8 +84,8 @@
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NIK";
+            this.label1.TabIndex = -0;
+            this.label1.Text = "Nama";
             // 
             // label2
             // 
@@ -279,7 +279,6 @@
             // txtCari
             // 
             this.txtCari.Location = new System.Drawing.Point(384, 230);
-            this.txtCari.Margin = new System.Windows.Forms.Padding(2);
             this.txtCari.Name = "txtCari";
             this.txtCari.Size = new System.Drawing.Size(196, 20);
             this.txtCari.TabIndex = 19;
